@@ -39,6 +39,6 @@ public class ParkingSpots {
     }
 
     public String getSpotType() {
-        return spotSize.toString(); // Returns "COMPACT" or "LARGE"
+        return spotSize.toString();
     }
 }
