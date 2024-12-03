@@ -29,7 +29,7 @@ The Parking Lot Management System is a Java-based simulation of a parking lot. I
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/sheetalvarsani/parking-lot.git
+   git clone https://github.com/sheetalvarsani/parking-lot-management-system.git
    ```
 
 2. Open the project in your preferred IDE.
