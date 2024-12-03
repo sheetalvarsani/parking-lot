@@ -33,4 +33,12 @@ public class ParkingSpots {
     public boolean isAvailable() {
         return currentVehicle == null;
     }
+
+    public Vehicle getCurrentVehicle() {
+        return currentVehicle;
+    }
+
+    public String getSpotType() {
+        return spotSize.toString(); // Returns "COMPACT" or "LARGE"
+    }
 }
