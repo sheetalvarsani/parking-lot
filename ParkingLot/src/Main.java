@@ -1,22 +1,33 @@
+import parkinglot.ParkingLot;
 import parkinglot.vehicles.*;
 
 import parkinglot.spots.*;
 
 public class Main {
     public static void main(String[] args) {
+        ParkingLot parkingLot = new ParkingLot(3, 4);
+
         Vehicle motorcycle = new Motorcycle();
         Vehicle car = new Car();
         Vehicle van = new Van();
+        Vehicle motorcycle2 = new Motorcycle();
+        Vehicle motorcycle3 = new Motorcycle();
 
-        System.out.println("Motorcycle needs spots: " + motorcycle.getSpotsNeeded());
-        System.out.println("Car needs spots: " + car.getSpotsNeeded());
-        System.out.println("Van needs spots: " + van.getSpotsNeeded());
+        parkingLot.displayStatus();
 
-        ParkingSpots compactSpot = new ParkingSpots(VehicleSize.COMPACT);
+        System.out.println("\nParking vehicles...");
+        parkingLot.parkVehicle(motorcycle);
+        parkingLot.parkVehicle(car);
+        parkingLot.parkVehicle(van);
+        parkingLot.parkVehicle(motorcycle2);
+        parkingLot.parkVehicle(motorcycle3);
 
-        System.out.println("Car can park in compact spot: " + compactSpot.canFitVehicle(car));
-        System.out.println("Motorcycle can park in compact spot: " + compactSpot.canFitVehicle(motorcycle));
-        System.out.println("Van can park in compact spot: " + compactSpot.canFitVehicle(van));
 
+        parkingLot.displayStatus();
+
+        System.out.println("\nRemoving car...");
+        parkingLot.removeVehicle(car);
+
+        parkingLot.displayStatus();
     }
 }
