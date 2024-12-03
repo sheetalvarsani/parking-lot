@@ -1,8 +1,6 @@
 import parkinglot.ParkingLot;
 import parkinglot.vehicles.*;
 
-import parkinglot.spots.*;
-
 public class Main {
     public static void main(String[] args) {
         ParkingLot parkingLot = new ParkingLot(3, 4);
